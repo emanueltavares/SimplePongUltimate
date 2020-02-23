@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Utils
+namespace Application.Utils
 {
     /// <summary>
     /// Update Camera's orthographic size to screen size
