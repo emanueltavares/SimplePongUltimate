@@ -47,7 +47,8 @@ namespace Application.Controllers
 
                     // let's calculate Y direction
                     float distFromCenter = Mathf.Abs(player.transform.position.y - _rigidbody2D.position.y);
-                    _direction.y = Mathf.Lerp(0f, _direction.y, distFromCenter / _maxDistFromCenter);
+                    float maxDirectionY = Mathf.Sign(_direction.y) * 0.5f;
+                    _direction.y = Mathf.Lerp(0f, maxDirectionY, distFromCenter / _maxDistFromCenter);
 
                     // Scale magnitudes up, so we won't hinder the speed of our ball
                     float magnitude = _direction.magnitude;

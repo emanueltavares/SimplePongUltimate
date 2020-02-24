@@ -714,6 +714,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2379708924581300608, guid: 3255c7b8800d1e049821d5521b0ea27a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206609, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_Name
@@ -778,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635463967564863599, guid: 3255c7b8800d1e049821d5521b0ea27a,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3255c7b8800d1e049821d5521b0ea27a, type: 3}
@@ -867,6 +877,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2379708924581300608, guid: 3255c7b8800d1e049821d5521b0ea27a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206609, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_Name
@@ -931,6 +946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635463967564863599, guid: 3255c7b8800d1e049821d5521b0ea27a,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3255c7b8800d1e049821d5521b0ea27a, type: 3}
