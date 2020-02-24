@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Application.Utils;
+using UnityEngine;
 
 namespace Application.Controllers
 {
@@ -8,8 +9,6 @@ namespace Application.Controllers
         [SerializeField] private float _speed = 0;
 
         private Rigidbody2D _rigidbody2D;
-        private bool _flipX = false;
-        private bool _flipY = false;
 
         protected virtual void OnEnable()
         {
@@ -21,17 +20,6 @@ namespace Application.Controllers
 
         protected virtual void Update()
         {
-            if (_flipX)
-            {
-                _direction.x = -_direction.x; // flip X by negative X
-                _flipX = false;
-            }
-            if (_flipY)
-            {
-                _direction.y = -_direction.y; // flip Y by negative Y
-                _flipY = false;
-            }
-
             Vector2 velocity = _direction * _speed;
             _rigidbody2D.velocity = velocity * Time.deltaTime;
         }
@@ -47,15 +35,36 @@ namespace Application.Controllers
             }
             contactNormal /= collision2D.contactCount;
 
-            // If contact normal is either down or up, we will flip Y
-            if (contactNormal == Vector2.down || contactNormal == Vector2.up)
+            if (collision2D.gameObject.CompareTag(Constants.WallTag))
             {
-                _flipY = true;
+                // If contact normal is either down or up, we will flip Y
+                if (contactNormal == Vector2.down || contactNormal == Vector2.up)
+                {
+                    _direction.y = -_direction.y; // flip Y by negative Y
+                }
+                // If contact normal is either left or right, we will flip X
+                else if (contactNormal == Vector2.left || contactNormal == Vector2.right)
+                {
+                    _direction.x = -_direction.x; // flip X by negative X
+                }
             }
-            // If contact normal is either left or right, we will flip X
-            else if (contactNormal == Vector2.left || contactNormal == Vector2.right)
+            // Change direction when colliding with player
+            else if (collision2D.gameObject.CompareTag(Constants.PlayerTag))
             {
-                _flipX = true;
+                // If contact normal is either down or up, we will flip Y
+                if (contactNormal == Vector2.down || contactNormal == Vector2.up)
+                {
+                    _direction.y = -_direction.y; // flip Y by negative Y
+                }
+                // If contact normal is left
+                else if (contactNormal == Vector2.left)
+                {
+                    _direction.x = -_direction.x; // flip X by negative X
+                }
+                else if (contactNormal == Vector2.right)
+                {
+                    _direction.x = -_direction.x; // flip X by negative X
+                }
             }
         }
     }
