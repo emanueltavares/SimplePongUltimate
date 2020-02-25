@@ -104,8 +104,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3979124081369894654}
   - component: {fileID: 3979124081369894655}
+  - component: {fileID: 308962204}
   m_Layer: 11
-  m_Name: Warning Area
+  m_Name: Left Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +126,7 @@ Transform:
   - {fileID: 3979124081934011599}
   - {fileID: 3979124083038611680}
   m_Father: {fileID: 3979124082178454221}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3979124081369894655
 BoxCollider2D:
@@ -153,6 +154,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &308962204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979124081369894653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnLeftGoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3979124081371633358
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3979124082178454221}
+  - component: {fileID: 576315305}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -448,17 +476,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3979124082178454220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3979124081836554966}
   - {fileID: 3979124081664108376}
-  - {fileID: 3979124082440617407}
   - {fileID: 3979124081369894654}
+  - {fileID: 3979124082440617407}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576315305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979124082178454220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d275b00768fd6df448958761bfc6508c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ball: {fileID: 0}
+  _serveDirection: {x: 1, y: 0}
+  _startSpeed: 5
 --- !u!1 &3979124082440617406
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,8 +512,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3979124082440617407}
   - component: {fileID: 3979124082440617400}
+  - component: {fileID: 1379406045}
   m_Layer: 11
-  m_Name: Warning Area
+  m_Name: Right Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +534,7 @@ Transform:
   - {fileID: 3979124081371633359}
   - {fileID: 3979124081245106196}
   m_Father: {fileID: 3979124082178454221}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3979124082440617400
 BoxCollider2D:
@@ -518,6 +562,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1379406045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979124082440617406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnRightGoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3979124082905014256
 GameObject:
   m_ObjectHideFlags: 0

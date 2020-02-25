@@ -5,8 +5,8 @@ namespace Application.Utils
 
     public class SpriteScrolling : MonoBehaviour
     {
-        [SerializeField] private float _maxTimeToScaleWidth;
-        [SerializeField] private float _maxTimeToScaleHeight;
+        [SerializeField] private float _maxTimeToScaleWidth = 0;
+        [SerializeField] private float _maxTimeToScaleHeight = 0;
 
         private SpriteRenderer _spriteRenderer;
         private Vector2 _minSize;
