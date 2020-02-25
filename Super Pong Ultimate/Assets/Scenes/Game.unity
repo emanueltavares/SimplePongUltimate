@@ -122,12 +122,12 @@ GameObject:
   m_Component:
   - component: {fileID: 98667068}
   - component: {fileID: 98667067}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &98667067
 BoxCollider2D:
@@ -180,12 +180,12 @@ GameObject:
   m_Component:
   - component: {fileID: 234453433}
   - component: {fileID: 234453432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &234453432
 BoxCollider2D:
@@ -228,32 +228,6 @@ Transform:
   m_Father: {fileID: 576315305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &519420028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1971043537966403113, guid: 8c4c836d554d190419b3209433dbdc6d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1971043537535678037}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &519420029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f143c2584d68a8b4c967ce560f917267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 519420031}
-  _targetScreenSize: {x: 1280, y: 720}
---- !u!20 &519420031 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1971043537966403114, guid: 8c4c836d554d190419b3209433dbdc6d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1971043537535678037}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &576315304
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +242,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &576315305
 Transform:
@@ -298,12 +272,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1030926941}
   - component: {fileID: 1030926942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1030926941
 Transform:
@@ -377,12 +351,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1044043698}
   - component: {fileID: 1044043699}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1044043698
 Transform:
@@ -435,12 +409,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1251987628}
   - component: {fileID: 1251987627}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &1251987627
 BoxCollider2D:
@@ -559,12 +533,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1738130907}
   - component: {fileID: 1738130908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1738130907
 Transform:
@@ -638,12 +612,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1943002685}
   - component: {fileID: 1943002686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1943002685
 Transform:
@@ -714,11 +688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2379708924581300608, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206609, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_Name
@@ -727,7 +696,7 @@ PrefabInstance:
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
@@ -752,12 +721,12 @@ PrefabInstance:
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
@@ -777,17 +746,7 @@ PrefabInstance:
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635463967564863599, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3255c7b8800d1e049821d5521b0ea27a, type: 3}
@@ -801,12 +760,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2146071189}
   - component: {fileID: 2146071190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2146071189
 Transform:
@@ -877,11 +836,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2379708924581300608, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206609, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_Name
@@ -890,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
         type: 3}
@@ -942,16 +896,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5496565016652206623, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635463967564863599, guid: 3255c7b8800d1e049821d5521b0ea27a,
-        type: 3}
-      propertyPath: _maxSpeed
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3255c7b8800d1e049821d5521b0ea27a, type: 3}
 --- !u!1001 &1971043537535678037
@@ -965,11 +909,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971043537966403114, guid: 8c4c836d554d190419b3209433dbdc6d,
-        type: 3}
-      propertyPath: orthographic size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1971043537966403285, guid: 8c4c836d554d190419b3209433dbdc6d,
         type: 3}
@@ -1026,8 +965,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 519420029, guid: 8c4c836d554d190419b3209433dbdc6d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c4c836d554d190419b3209433dbdc6d, type: 3}
 --- !u!1001 &7872807176024759198
 PrefabInstance:

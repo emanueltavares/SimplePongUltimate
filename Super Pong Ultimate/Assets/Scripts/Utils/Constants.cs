@@ -1,9 +1,11 @@
-﻿namespace Application.Utils
+﻿using UnityEngine;
+
+namespace Application.Utils
 {
     public static class Constants
     {
-        public static readonly string WallTag = "Wall";
-        public static readonly string PlayerTag = "Player";
-        public static readonly string BallTag = "Ball";
+        public static readonly int WallLayer = LayerMask.NameToLayer("Wall");
+        public static readonly int PlayerLayer = LayerMask.NameToLayer("Player");
+        public static readonly int BallLayer = LayerMask.NameToLayer("Ball");
     }
 }

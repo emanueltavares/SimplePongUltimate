@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6767423252560547822}
   - component: {fileID: 3459173896530460233}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,9 +68,9 @@ GameObject:
   - component: {fileID: 7872807175918500887}
   - component: {fileID: 165586824}
   - component: {fileID: 1954067823608384148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ball
-  m_TagString: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _direction: {x: 0.5, y: 0.5}
   _speed: 100
+  _maxDistFromCenter: 0.25
 --- !u!1 &7872807177399918563
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7872807177399918561}
   - component: {fileID: 7872807177399918560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

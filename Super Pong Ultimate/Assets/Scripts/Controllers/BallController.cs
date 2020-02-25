@@ -37,7 +37,7 @@ namespace Application.Controllers
             contactNormal /= collision2D.contactCount;
 
             // Change direction when colliding with player
-            if (collision2D.gameObject.CompareTag(Constants.PlayerTag))
+            if (collision2D.gameObject.layer == Constants.PlayerLayer)
             {
                 GameObject player = collision2D.gameObject;
 
