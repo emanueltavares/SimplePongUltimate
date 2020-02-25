@@ -169,7 +169,7 @@ MonoBehaviour:
   _goalEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576315305}
         m_MethodName: OnLeftGoal
         m_Mode: 1
         m_Arguments:
@@ -499,9 +499,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d275b00768fd6df448958761bfc6508c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scoreLeftText: {fileID: 0}
+  _scoreRightText: {fileID: 0}
   _ball: {fileID: 0}
   _serveDirection: {x: 1, y: 0}
-  _startSpeed: 5
+  _startSpeed: 100
 --- !u!1 &3979124082440617406
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +579,7 @@ MonoBehaviour:
   _goalEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576315305}
         m_MethodName: OnRightGoal
         m_Mode: 1
         m_Arguments:

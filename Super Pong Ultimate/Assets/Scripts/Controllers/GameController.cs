@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Application.Controllers
 {
     public class GameController : MonoBehaviour
     {
         // Serialized Variables
+        [Header("UI")]
+        [SerializeField] private Text _scoreLeftText;
+        [SerializeField] private Text _scoreRightText;
 
-        [Header("Ball")]
+        [Header("Game")]
 #pragma warning disable CS0649
         [SerializeField] private BallController _ball;
 #pragma warning restore CS0649
@@ -36,6 +40,7 @@ namespace Application.Controllers
 
             // Add Right Score
             ScoreRight += 1;
+            _scoreRightText.text = ScoreRight.ToString();
 
             // Set Serve to Left
             _serveDirection = Vector2.left;
@@ -48,6 +53,7 @@ namespace Application.Controllers
 
             // Add Left Score
             ScoreLeft += 1;
+            _scoreLeftText.text = ScoreLeft.ToString();
 
             // Set Serve to Right
             _serveDirection = Vector2.right;
