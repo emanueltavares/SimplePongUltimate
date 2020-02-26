@@ -46,6 +46,8 @@ namespace Application.Controllers
             yield return StartCoroutine(SetStatusText("GO", 1f));
 
             // Clean up
+            _scoreLeftText.text = string.Empty;
+            _scoreRightText.text = string.Empty;
             _status.text = string.Empty;
 
             // Initialize ball
@@ -90,6 +92,7 @@ namespace Application.Controllers
 
                 // Add Right Score
                 ScoreRight += 1;
+                _scoreLeftText.text = ScoreLeft.ToString();
                 _scoreRightText.text = ScoreRight.ToString();
 
                 yield return StartCoroutine(SetStatusText("RIGHT SCORES", 3f));
@@ -109,6 +112,7 @@ namespace Application.Controllers
                 // Add Left Score
                 ScoreLeft += 1;
                 _scoreLeftText.text = ScoreLeft.ToString();
+                _scoreRightText.text = ScoreRight.ToString();
 
                 // Set Serve to Right
                 _serveDirection = Vector2.right;
