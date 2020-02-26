@@ -52,15 +52,17 @@ namespace Application.Controllers
             
         }
 
-        public void ClickStartGame()
+        public void StartGame()
         {
+            ScoreLeft = 0;
+            ScoreRight = 0;
             _leftPaddle.SetActive(true);
             _rightPaddle.SetActive(true);
             _startGameButton.gameObject.SetActive(false);
-            StartCoroutine(StartGame());
+            StartCoroutine(StartMatch());
         }
 
-        private IEnumerator StartGame()
+        private IEnumerator StartMatch()
         {
             if (_serveDirection == Vector2.right)
             {
@@ -76,8 +78,6 @@ namespace Application.Controllers
             yield return StartCoroutine(SetStatusText("GO", 1f));
 
             // Clean up
-            ScoreLeft = 0;
-            ScoreRight = 0;
             _scoreLeftText.text = string.Empty;
             _scoreRightText.text = string.Empty;
             _status.text = string.Empty;
@@ -131,7 +131,7 @@ namespace Application.Controllers
 
                 if (ScoreRight < _maxScore)
                 {
-                    yield return StartCoroutine(StartGame());
+                    yield return StartCoroutine(StartMatch());
                 }
                 else
                 {
@@ -154,7 +154,7 @@ namespace Application.Controllers
 
                 if (ScoreLeft < _maxScore)
                 {
-                    yield return StartCoroutine(StartGame());
+                    yield return StartCoroutine(StartMatch());
                 }
                 else
                 {
