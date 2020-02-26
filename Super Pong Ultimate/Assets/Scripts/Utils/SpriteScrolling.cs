@@ -19,7 +19,7 @@ namespace Application.Utils
             }
 
             _minSize = _spriteRenderer.size;
-            _maxSize = _minSize * 2f;
+            _maxSize = _minSize * 3f;
         }
 
         protected virtual void Update()
@@ -28,13 +28,14 @@ namespace Application.Utils
             float t;
             if (_maxTimeToScaleWidth > 0)
             {
-                t = (Time.time % _maxTimeToScaleWidth) / _maxTimeToScaleWidth;
+                t = Mathf.InverseLerp(0f, _maxTimeToScaleWidth, Time.time % _maxTimeToScaleWidth);
                 size.x = Mathf.Lerp(_minSize.x, _maxSize.x, t);
             }
             if (_maxTimeToScaleHeight > 0)
             {
-                t = (Time.time % _maxTimeToScaleHeight) / _maxTimeToScaleHeight;
+                t = Mathf.InverseLerp(0f, _maxTimeToScaleHeight, Time.time % _maxTimeToScaleHeight);
                 size.y = Mathf.Lerp(_minSize.y, _maxSize.y, t);
+                Debug.Log(t);
             }
             _spriteRenderer.size = size;
         }
