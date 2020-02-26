@@ -22,6 +22,11 @@ namespace Application.Controllers
         [SerializeField] private Vector2 _serveDirection = Vector2.right;
         [SerializeField] private float _startSpeed = 5f;
         [SerializeField] private int _maxScore = 5;
+
+        [Header("Sounds")]
+        [SerializeField] private AudioClip _leftScoresSound;
+        [SerializeField] private AudioClip _rightScoresSound;
+        [SerializeField] private AudioSource _audioSource;
 #pragma warning restore CS0649
 
         // Properties
@@ -119,6 +124,9 @@ namespace Application.Controllers
 
             if (addRight)
             {
+                // Play sound
+                _audioSource.PlayOneShot(_rightScoresSound);
+
                 // Set Serve to Left
                 _serveDirection = Vector2.left;
 
@@ -142,6 +150,9 @@ namespace Application.Controllers
             }
             else
             {
+                // Play sound
+                _audioSource.PlayOneShot(_leftScoresSound);
+
                 // Add Left Score
                 ScoreLeft += 1;
                 _scoreLeftText.text = ScoreLeft.ToString();

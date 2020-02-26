@@ -7,6 +7,7 @@ namespace Application.Controllers
     {
         // Serialized Variables
         [SerializeField] private float _maxDistFromCenter = 0.25f;
+        [SerializeField] private AudioSource _audioSource;
 
         // Variables
         private Rigidbody2D _rigidbody2D;
@@ -53,10 +54,16 @@ namespace Application.Controllers
             if (contactNormal == Vector2.down || contactNormal == Vector2.up) // If contact normal is either down or up, we will flip Y
             {
                 _direction.y = -_direction.y; // flip Y by negative Y
+
+                // Play Blip
+                _audioSource.Play();
             }
             else if (contactNormal == Vector2.left || contactNormal == Vector2.right) // If contact normal is either left or right, we will flip X
             {
                 _direction.x = -_direction.x; // flip X by negative X
+
+                // Play Blip
+                _audioSource.Play();
             }
         }
 
@@ -76,6 +83,9 @@ namespace Application.Controllers
                 float magnitude = _direction.magnitude;
                 _direction.x *= 1f / magnitude;
                 _direction.y *= 1f / magnitude;
+
+                // Play Blip
+                _audioSource.Play();
             }
         }
     }
