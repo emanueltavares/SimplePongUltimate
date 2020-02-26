@@ -58,14 +58,20 @@ namespace Application.Controllers
                 _direction.y = -_direction.y; // flip Y by negative Y
 
                 // Play Blip
-                _audioSource.Play();
+                if (isActiveAndEnabled)
+                {
+                    _audioSource.Play();
+                }
             }
             else if (contactNormal == Vector2.left || contactNormal == Vector2.right) // If contact normal is either left or right, we will flip X
             {
                 _direction.x = -_direction.x; // flip X by negative X
 
                 // Play Blip
-                _audioSource.Play();
+                if (isActiveAndEnabled)
+                {
+                    _audioSource.Play();
+                }
             }
         }
 

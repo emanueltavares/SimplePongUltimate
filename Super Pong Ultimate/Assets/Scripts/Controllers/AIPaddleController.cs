@@ -13,6 +13,8 @@ namespace Application.Controllers
 
         private Rigidbody2D _rigidbody2D;
 
+        public float MaxDeltaPosition { get => _maxDeltaPosition; set => _maxDeltaPosition = value; }
+
         protected virtual void OnEnable()
         {
             if (_rigidbody2D == null)
@@ -32,7 +34,7 @@ namespace Application.Controllers
                 targetPosition = new Vector2(_rigidbody2D.position.x, _ballRigidbody2D.position.y);
             }
 
-            Vector2 nextPosition = Vector2.MoveTowards(_rigidbody2D.position, targetPosition, _maxDeltaPosition * Time.deltaTime);
+            Vector2 nextPosition = Vector2.MoveTowards(_rigidbody2D.position, targetPosition, MaxDeltaPosition * Time.deltaTime);
             _rigidbody2D.MovePosition(nextPosition);
 
         }

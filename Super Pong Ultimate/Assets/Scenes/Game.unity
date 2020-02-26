@@ -2295,15 +2295,41 @@ MonoBehaviour:
   _scoreRightText: {fileID: 129221153}
   _status: {fileID: 1849063157}
   _timePerCharStatus: 0.15
-  _leftPaddle: {fileID: 5496565016951851322}
-  _rightPaddle: {fileID: 4929912622108718701}
+  _leftPaddle: {fileID: 8635463966992515908}
+  _rightPaddle: {fileID: 4929912622108718702}
   _ball: {fileID: 8529793776458715402}
   _maxScore: 5
   _serveDirection: {x: -1, y: 0}
   _startBallSpeed: 150
   _maxBallSpeed: 300
   _hitsToMaxSpeed: 20
-  _difficultyCurve:
+  _ballSpeedProgression:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _startDeltaPosition: 1
+  _maxDeltaPosition: 2
+  _difficultyProgression:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -2758,7 +2784,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3979124082178454221}
-        m_MethodName: IncreaseDifficulty
+        m_MethodName: IncreaseBallSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2805,7 +2831,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3979124082178454221}
-        m_MethodName: IncreaseDifficulty
+        m_MethodName: IncreaseBallSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

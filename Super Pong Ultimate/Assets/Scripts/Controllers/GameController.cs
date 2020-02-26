@@ -16,8 +16,8 @@ namespace Application.Controllers
         [SerializeField] private float _timePerCharStatus = 0.15f;
 
         [Header("Game")]
-        [SerializeField] private GameObject _leftPaddle;
-        [SerializeField] private GameObject _rightPaddle;
+        [SerializeField] private PaddleController _leftPaddle;
+        [SerializeField] private AIPaddleController _rightPaddle;
         [SerializeField] private BallController _ball;
         [SerializeField] private int _maxScore = 5;
         [SerializeField] private Vector2 _serveDirection = Vector2.right;
@@ -26,7 +26,10 @@ namespace Application.Controllers
         [SerializeField] private float _startBallSpeed = 5f;
         [SerializeField] private float _maxBallSpeed = 5f;
         [SerializeField] private int _hitsToMaxSpeed = 20;
-        [SerializeField] private AnimationCurve _difficultyCurve = new AnimationCurve();
+        [SerializeField] private AnimationCurve _ballSpeedProgression = new AnimationCurve();
+        [SerializeField] private float _startDeltaPosition = 1.5f;
+        [SerializeField] private float _maxDeltaPosition = 2f;
+        [SerializeField] private AnimationCurve _difficultyProgression = new AnimationCurve();
 #pragma warning restore CS0649
 
         // Variables
@@ -48,8 +51,8 @@ namespace Application.Controllers
             _scoreRightText.text = string.Empty;
 
             // Hide paddles
-            _leftPaddle.SetActive(false);
-            _rightPaddle.SetActive(false);
+            _leftPaddle.gameObject.SetActive(false);
+            _rightPaddle.gameObject.SetActive(false);
 
             // Show Game Name
             yield return StartCoroutine(SetStatusText("EXTREME PONG", 3f));
@@ -60,10 +63,15 @@ namespace Application.Controllers
 
         public void StartGame()
         {
+            // Reset difficulty
+            _rightPaddle.MaxDeltaPosition = _startDeltaPosition;
+            
+            // Reset Score
             ScoreLeft = 0;
             ScoreRight = 0;
-            _leftPaddle.SetActive(true);
-            _rightPaddle.SetActive(true);
+
+            _leftPaddle.gameObject.SetActive(true);
+            _rightPaddle.gameObject.SetActive(true);
             _startGameButton.gameObject.SetActive(false);
             StartCoroutine(StartMatch());
         }
@@ -167,6 +175,7 @@ namespace Application.Controllers
 
                 if (ScoreLeft < _maxScore)
                 {
+                    IncreaseAILevel();
                     yield return StartCoroutine(StartMatch());
                 }
                 else
@@ -178,13 +187,24 @@ namespace Application.Controllers
             }
         }
 
-        public void IncreaseDifficulty()
+        public void IncreaseBallSpeed()
         {
             _hits += 1;
 
             float normalizedHits = Mathf.InverseLerp(0, _hitsToMaxSpeed, _hits);
-            float difficulty = _difficultyCurve.Evaluate(normalizedHits);
+            float difficulty = _ballSpeedProgression.Evaluate(normalizedHits);
             _ball.Speed = Mathf.Lerp(_startBallSpeed, _maxBallSpeed, difficulty);
+
+            Debug.LogFormat("Increase Ball Speed to {0}", _ball.Speed);
+        }
+
+        private void IncreaseAILevel()
+        {
+            float normalizedLeftScore = Mathf.InverseLerp(0, _maxScore - 1, ScoreLeft);
+            float difficulty = _difficultyProgression.Evaluate(normalizedLeftScore);
+            _rightPaddle.MaxDeltaPosition = Mathf.Lerp(_startDeltaPosition, _maxDeltaPosition, difficulty);
+
+            Debug.LogFormat("Increase AI Level to {0}", _rightPaddle.MaxDeltaPosition);
         }
     }
 }
