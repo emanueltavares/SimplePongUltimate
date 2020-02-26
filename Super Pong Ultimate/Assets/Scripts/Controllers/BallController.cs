@@ -30,6 +30,7 @@ namespace Application.Controllers
             _direction = Vector2.zero;
             _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.position = Vector2.zero;
+            transform.position = Vector2.zero;
         }
 
         protected virtual void Update()
