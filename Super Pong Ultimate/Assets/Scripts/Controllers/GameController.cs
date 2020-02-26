@@ -6,6 +6,7 @@ namespace Application.Controllers
 {
     public class GameController : MonoBehaviour
     {
+#pragma warning disable CS0649
         // Serialized Variables
         [Header("UI")]
         [SerializeField] private Text _scoreLeftText;
@@ -14,12 +15,11 @@ namespace Application.Controllers
         [SerializeField] private float _timePerCharStatus = 0.15f;
 
         [Header("Game")]
-#pragma warning disable CS0649
         [SerializeField] private BallController _ball;
-#pragma warning restore CS0649
         [SerializeField] private Vector2 _serveDirection = Vector2.right;
         [SerializeField] private float _startSpeed = 5f;
         [SerializeField] private int _maxScore = 5;
+#pragma warning restore CS0649
 
         // Properties
         public int ScoreLeft { get; set; }

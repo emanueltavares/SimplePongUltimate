@@ -627,9 +627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50351f66a6eb3964f90b65c011e9b98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &751209559 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7872807175918500887, guid: df850a7dfefe95d47bfd46a11d350aba,
+--- !u!50 &751209558 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 165586824, guid: df850a7dfefe95d47bfd46a11d350aba,
     type: 3}
   m_PrefabInstance: {fileID: 7872807176024759198}
   m_PrefabAsset: {fileID: 0}
@@ -1723,9 +1723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68da49a47b84d9b46a5947f685e80665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballTransform: {fileID: 751209559}
-  _maxSpeed: 150
-  _acceleration: 50
+  _ballRigidbody2D: {fileID: 751209558}
+  _maxSpeed: 1000
 --- !u!1 &5222284461666590971
 GameObject:
   m_ObjectHideFlags: 0

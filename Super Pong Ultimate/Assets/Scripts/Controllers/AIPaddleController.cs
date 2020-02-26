@@ -6,8 +6,10 @@ namespace Application.Controllers
 {
     public class AIPaddleController : MonoBehaviour
     {
-        [SerializeField] private Transform _ballTransform;
-        [SerializeField] private float _maxSpeed = 5;
+#pragma warning disable CS0649
+        [SerializeField] private Rigidbody2D _ballRigidbody2D;
+        [SerializeField] private float _maxSpeed = 150f;
+#pragma warning restore CS0649
 
         private Rigidbody2D _rigidbody2D;
 
@@ -21,9 +23,19 @@ namespace Application.Controllers
 
         protected virtual void Update()
         {
-            float nextPositionY = Mathf.MoveTowards(_rigidbody2D.position.y, _ballTransform.position.y, _maxSpeed * Time.deltaTime);
-            Vector2 nextPosition = new Vector2(_rigidbody2D.position.x, nextPositionY);
-            _rigidbody2D.MovePosition(nextPosition);
+            // If ball is not active, paddle will move towards the center
+            Vector2 targetPosition = new Vector2(_rigidbody2D.position.x, 0f);
+
+            // if ball is active, and close we move towards it
+            if (_ballRigidbody2D.gameObject.activeSelf)
+            {
+                targetPosition = new Vector2(_rigidbody2D.position.x, _ballRigidbody2D.position.y);
+            }
+
+            Vector2 nextPosition = Vector2.MoveTowards(_rigidbody2D.position, targetPosition, _maxSpeed * Time.deltaTime);
+            Vector2 velocity = nextPosition - _rigidbody2D.position;
+            _rigidbody2D.velocity = velocity;
+
         }
     }
 }
