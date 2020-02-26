@@ -9,12 +9,15 @@ namespace Application.Controllers
 #pragma warning disable CS0649
         // Serialized Variables
         [Header("UI")]
+        [SerializeField] private Button _startGameButton;
         [SerializeField] private Text _scoreLeftText;
         [SerializeField] private Text _scoreRightText;
         [SerializeField] private Text _status;
         [SerializeField] private float _timePerCharStatus = 0.15f;
 
         [Header("Game")]
+        [SerializeField] private GameObject _leftPaddle;
+        [SerializeField] private GameObject _rightPaddle;
         [SerializeField] private BallController _ball;
         [SerializeField] private Vector2 _serveDirection = Vector2.right;
         [SerializeField] private float _startSpeed = 5f;
@@ -25,12 +28,39 @@ namespace Application.Controllers
         public int ScoreLeft { get; set; }
         public int ScoreRight { get; set; }
 
-        protected virtual void Start()
+        protected virtual void OnEnable()
         {
+            StartCoroutine(ShowStartScreen());
+        }
+
+        private IEnumerator ShowStartScreen()
+        {
+            // Clean up
+            _scoreLeftText.text = string.Empty;
+            _scoreRightText.text = string.Empty;
+
+            // Hide paddles
+            _leftPaddle.SetActive(false);
+            _rightPaddle.SetActive(false);
+
+            // Show Game Name
+            yield return StartCoroutine(SetStatusText("PONG", 3f));
+
+            // Show Start Game Button
+            _startGameButton.gameObject.SetActive(true);
+
+            
+        }
+
+        public void ClickStartGame()
+        {
+            _leftPaddle.SetActive(true);
+            _rightPaddle.SetActive(true);
+            _startGameButton.gameObject.SetActive(false);
             StartCoroutine(StartGame());
         }
 
-        public IEnumerator StartGame()
+        private IEnumerator StartGame()
         {
             if (_serveDirection == Vector2.right)
             {
@@ -46,6 +76,8 @@ namespace Application.Controllers
             yield return StartCoroutine(SetStatusText("GO", 1f));
 
             // Clean up
+            ScoreLeft = 0;
+            ScoreRight = 0;
             _scoreLeftText.text = string.Empty;
             _scoreRightText.text = string.Empty;
             _status.text = string.Empty;
@@ -105,6 +137,7 @@ namespace Application.Controllers
                 {
                     // end game
                     yield return StartCoroutine(SetStatusText("RIGHT WINS", 3f));
+                    yield return StartCoroutine(ShowStartScreen());
                 }
             }
             else
@@ -127,6 +160,7 @@ namespace Application.Controllers
                 {
                     // end game
                     yield return StartCoroutine(SetStatusText("LEFT WINS", 3f));
+                    yield return StartCoroutine(ShowStartScreen());
                 }
             }
         }
