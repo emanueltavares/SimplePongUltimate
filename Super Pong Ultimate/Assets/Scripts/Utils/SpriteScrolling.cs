@@ -2,7 +2,6 @@
 
 namespace Application.Utils
 {
-
     public class SpriteScrolling : MonoBehaviour
     {
         [SerializeField] private float _maxTimeToScaleWidth = 0;
