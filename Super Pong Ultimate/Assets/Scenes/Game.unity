@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 308962202}
   - component: {fileID: 308962203}
   - component: {fileID: 3979124081369894648}
+  - component: {fileID: 308962204}
   m_Layer: 11
   m_Name: Left Goal
   m_TagString: Untagged
@@ -439,6 +440,103 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 2}
   m_EdgeRadius: 0
+--- !u!82 &308962204
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308962201}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 07eb23e51a13f434ca7b55eb0f7705a1,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: f6d7c7e8950ea0d4ba74995a46b7bf65, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &309394346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1552,7 @@ GameObject:
   - component: {fileID: 1379406043}
   - component: {fileID: 1379406044}
   - component: {fileID: 3979124082440617401}
+  - component: {fileID: 1379406045}
   m_Layer: 11
   m_Name: Right Goal
   m_TagString: Untagged
@@ -1503,6 +1602,103 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 2}
   m_EdgeRadius: 0
+--- !u!82 &1379406045
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379406042}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 07eb23e51a13f434ca7b55eb0f7705a1,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: da90971c435336e49b2ea4405e830dad, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1540258914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,11 +2250,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goalEvent:
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _event:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3979124082178454221}
         m_MethodName: OnLeftGoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 308962204}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2088,12 +2298,35 @@ MonoBehaviour:
   _leftPaddle: {fileID: 5496565016951851322}
   _rightPaddle: {fileID: 4929912622108718701}
   _ball: {fileID: 8529793776458715402}
-  _serveDirection: {x: -1, y: 0}
-  _startSpeed: 100
   _maxScore: 5
-  _leftScoresSound: {fileID: 8300000, guid: da90971c435336e49b2ea4405e830dad, type: 3}
-  _rightScoresSound: {fileID: 8300000, guid: f6d7c7e8950ea0d4ba74995a46b7bf65, type: 3}
-  _audioSource: {fileID: 576315306}
+  _serveDirection: {x: -1, y: 0}
+  _startBallSpeed: 150
+  _maxBallSpeed: 300
+  _hitsToMaxSpeed: 100
+  _difficultyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &3979124082440617401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2106,11 +2339,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goalEvent:
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _event:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3979124082178454221}
         m_MethodName: OnRightGoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379406045}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2484,6 +2731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8413272300984632730}
   - component: {fileID: 589172938422005672}
+  - component: {fileID: 7119211939157297172}
   m_Layer: 12
   m_Name: Trigger
   m_TagString: Untagged
@@ -2491,6 +2739,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7119211939157297172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119211939157297171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3979124082178454221}
+        m_MethodName: IncreaseDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7701626091838961476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,6 +2778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9001810819575626445}
   - component: {fileID: 1193971967}
+  - component: {fileID: 7701626091838961477}
   m_Layer: 12
   m_Name: Trigger
   m_TagString: Untagged
@@ -2508,6 +2786,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7701626091838961477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701626091838961476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dd2de1d8a95c4790401aa8f7014b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3979124082178454221}
+        m_MethodName: IncreaseDifficulty
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &7872807175918500886
 Rigidbody2D:
   serializedVersion: 4

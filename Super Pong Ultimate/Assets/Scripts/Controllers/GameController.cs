@@ -19,15 +19,18 @@ namespace Application.Controllers
         [SerializeField] private GameObject _leftPaddle;
         [SerializeField] private GameObject _rightPaddle;
         [SerializeField] private BallController _ball;
-        [SerializeField] private Vector2 _serveDirection = Vector2.right;
-        [SerializeField] private float _startSpeed = 5f;
         [SerializeField] private int _maxScore = 5;
+        [SerializeField] private Vector2 _serveDirection = Vector2.right;
 
-        [Header("Sounds")]
-        [SerializeField] private AudioClip _leftScoresSound;
-        [SerializeField] private AudioClip _rightScoresSound;
-        [SerializeField] private AudioSource _audioSource;
+        [Header("Difficulty")]
+        [SerializeField] private float _startBallSpeed = 5f;
+        [SerializeField] private float _maxBallSpeed = 5f;
+        [SerializeField] private int _hitsToMaxSpeed = 20;
+        [SerializeField] private AnimationCurve _difficultyCurve = new AnimationCurve();
 #pragma warning restore CS0649
+
+        // Variables
+        private int _hits = 0;
 
         // Properties
         public int ScoreLeft { get; set; }
@@ -53,8 +56,6 @@ namespace Application.Controllers
 
             // Show Start Game Button
             _startGameButton.gameObject.SetActive(true);
-
-            
         }
 
         public void StartGame()
@@ -88,9 +89,10 @@ namespace Application.Controllers
             _status.text = string.Empty;
 
             // Initialize ball
+            _hits = 0;
             _ball.gameObject.SetActive(true);
             _ball.Direction = _serveDirection;
-            _ball.Speed = _startSpeed;
+            _ball.Speed = _startBallSpeed;
         }
 
         private IEnumerator SetStatusText(string text, float duration = 0f)
@@ -125,7 +127,7 @@ namespace Application.Controllers
             if (addRight)
             {
                 // Play sound
-                _audioSource.PlayOneShot(_rightScoresSound);
+                //_audioSource.PlayOneShot(_rightScoresSound);
 
                 // Set Serve to Left
                 _serveDirection = Vector2.left;
@@ -151,7 +153,7 @@ namespace Application.Controllers
             else
             {
                 // Play sound
-                _audioSource.PlayOneShot(_leftScoresSound);
+                //_audioSource.PlayOneShot(_leftScoresSound);
 
                 // Add Left Score
                 ScoreLeft += 1;
@@ -174,6 +176,15 @@ namespace Application.Controllers
                     yield return StartCoroutine(ShowStartScreen());
                 }
             }
+        }
+
+        public void IncreaseDifficulty()
+        {
+            _hits += 1;
+
+            float normalizedHits = Mathf.InverseLerp(0, _hitsToMaxSpeed, _hits);
+            float difficulty = _difficultyCurve.Evaluate(normalizedHits);
+            _ball.Speed = Mathf.Lerp(_startBallSpeed, _maxBallSpeed, difficulty);
         }
     }
 }
