@@ -8,7 +8,7 @@ namespace Application.Controllers
     {
 #pragma warning disable CS0649
         [SerializeField] private Rigidbody2D _ballRigidbody2D;
-        [SerializeField] private float _maxSpeed = 150f;
+        [SerializeField] private float _maxDeltaPosition = 1.5f;
 #pragma warning restore CS0649
 
         private Rigidbody2D _rigidbody2D;
@@ -32,9 +32,8 @@ namespace Application.Controllers
                 targetPosition = new Vector2(_rigidbody2D.position.x, _ballRigidbody2D.position.y);
             }
 
-            Vector2 nextPosition = Vector2.MoveTowards(_rigidbody2D.position, targetPosition, _maxSpeed * Time.deltaTime);
-            Vector2 velocity = nextPosition - _rigidbody2D.position;
-            _rigidbody2D.velocity = velocity;
+            Vector2 nextPosition = Vector2.MoveTowards(_rigidbody2D.position, targetPosition, _maxDeltaPosition * Time.deltaTime);
+            _rigidbody2D.MovePosition(nextPosition);
 
         }
     }

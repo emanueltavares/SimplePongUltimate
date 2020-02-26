@@ -2537,7 +2537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ballRigidbody2D: {fileID: 7872807175918500886}
-  _maxSpeed: 1000
+  _maxDeltaPosition: 0.5
 --- !u!1 &5222284461666590971
 GameObject:
   m_ObjectHideFlags: 0
