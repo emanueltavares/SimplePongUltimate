@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 807176654}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1046476369
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   _serveDirection: {x: -1, y: 0}
   _startBallSpeed: 150
   _maxBallSpeed: 300
-  _hitsToMaxSpeed: 100
+  _hitsToMaxSpeed: 20
   _difficultyCurve:
     serializedVersion: 2
     m_Curve:
@@ -2523,7 +2523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4929912622108718702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2537,7 +2537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ballRigidbody2D: {fileID: 7872807175918500886}
-  _maxDeltaPosition: 0.5
+  _maxDeltaPosition: 2
 --- !u!1 &5222284461666590971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &6719546836465116631
 BoxCollider2D:
   m_ObjectHideFlags: 0

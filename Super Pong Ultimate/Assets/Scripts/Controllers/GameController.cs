@@ -52,7 +52,7 @@ namespace Application.Controllers
             _rightPaddle.SetActive(false);
 
             // Show Game Name
-            yield return StartCoroutine(SetStatusText("PONG", 3f));
+            yield return StartCoroutine(SetStatusText("EXTREME PONG", 3f));
 
             // Show Start Game Button
             _startGameButton.gameObject.SetActive(true);
