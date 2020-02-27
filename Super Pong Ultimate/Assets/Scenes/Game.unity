@@ -838,10 +838,9 @@ AudioSource:
   m_GameObject: {fileID: 576315304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 07eb23e51a13f434ca7b55eb0f7705a1,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2300,9 +2299,9 @@ MonoBehaviour:
   _ball: {fileID: 8529793776458715402}
   _maxScore: 5
   _serveDirection: {x: -1, y: 0}
-  _startBallSpeed: 150
+  _startBallSpeed: 100
   _maxBallSpeed: 300
-  _hitsToMaxSpeed: 20
+  _hitsToMaxSpeed: 30
   _ballSpeedProgression:
     serializedVersion: 2
     m_Curve:
@@ -2999,7 +2998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4df49d0336e60e438020e4a2480af32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSpeed: 150
+  _maxSpeed: 120
 --- !u!4 &9001810819575626445
 Transform:
   m_ObjectHideFlags: 0

@@ -35,7 +35,6 @@ namespace Application.Utils
             {
                 t = Mathf.InverseLerp(0f, _maxTimeToScaleHeight, Time.time % _maxTimeToScaleHeight);
                 size.y = Mathf.Lerp(_minSize.y, _maxSize.y, t);
-                Debug.Log(t);
             }
             _spriteRenderer.size = size;
         }
