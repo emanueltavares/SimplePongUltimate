@@ -7,16 +7,18 @@ namespace Application.Controllers
     {
 #pragma warning disable CS0649
         // Serialized Variables
+        [SerializeField] private Vector2 _direction = Vector2.zero;
+        [SerializeField] private float _speed = 100f;
         [SerializeField] [Range(0.05f, 0.25f)] private float _maxDistFromCenter = 0.25f;
         [SerializeField] private AudioSource _audioSource;
 #pragma warning restore CS0649
 
         // Variables
         private Rigidbody2D _rigidbody2D;
-        private Vector2 _direction = Vector2.zero;
+        private float _minDirectionY = 0.01f;
 
         // Properties
-        public float Speed { get; set; }
+        public float Speed { get => _speed; set => _speed = value; }
         public Vector2 Direction { get => _direction; set => _direction = value; }
 
         protected virtual void OnEnable()
@@ -57,6 +59,19 @@ namespace Application.Controllers
             {
                 _direction.y = -_direction.y; // flip Y by negative Y
 
+                // Fixes a bug where the direction can be zero and nothing is flipped
+                if (Mathf.Approximately(_direction.y, 0f))
+                {
+                    if (contactNormal == Vector2.down)
+                    {
+                        _direction.y = -_minDirectionY;
+                    }
+                    else // contact up
+                    {
+                        _direction.y = _minDirectionY;
+                    }
+                }
+
                 // Play Blip
                 if (isActiveAndEnabled)
                 {
@@ -85,7 +100,7 @@ namespace Application.Controllers
                 // let's calculate Y direction
                 float distFromCenter = collider.transform.position.y - _rigidbody2D.position.y;
                 // will return either -1 if distFromCenter is positive and 1 if it's negative
-                float inverseDistFromCenterSign = Mathf.Sign(-distFromCenter); 
+                float inverseDistFromCenterSign = Mathf.Sign(-distFromCenter);
                 _direction.y = Mathf.Lerp(0f, inverseDistFromCenterSign, Mathf.Abs(distFromCenter) / _maxDistFromCenter);
 
                 // Scale magnitudes up, so we won't hinder the speed of our ball

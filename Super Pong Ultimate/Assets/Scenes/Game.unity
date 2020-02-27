@@ -2326,8 +2326,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _startDeltaPosition: 1.5
-  _maxDeltaPosition: 2.5
+  _startDeltaPosition: 1
+  _maxDeltaPosition: 2
   _difficultyProgression:
     serializedVersion: 2
     m_Curve:
@@ -2548,7 +2548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4929912622108718702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2986,6 +2986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50351f66a6eb3964f90b65c011e9b98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _direction: {x: -1, y: 0}
+  _speed: 80
   _maxDistFromCenter: 0.25
   _audioSource: {fileID: 7872807177394265768}
 --- !u!114 &8635463966992515908
