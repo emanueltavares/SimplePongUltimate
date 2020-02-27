@@ -7,7 +7,7 @@ namespace Application.Controllers
     {
 #pragma warning disable CS0649
         // Serialized Variables
-        [SerializeField] private float _maxDistFromCenter = 0.25f;
+        [SerializeField] [Range(0.05f, 0.25f)] private float _maxDistFromCenter = 0.25f;
         [SerializeField] private AudioSource _audioSource;
 #pragma warning restore CS0649
 

@@ -2326,8 +2326,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _startDeltaPosition: 2.5
-  _maxDeltaPosition: 5
+  _startDeltaPosition: 1.5
+  _maxDeltaPosition: 2.5
   _difficultyProgression:
     serializedVersion: 2
     m_Curve:
@@ -2548,7 +2548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &4929912622108718702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,8 +2561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68da49a47b84d9b46a5947f685e80665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _opponent: {fileID: 2379708925686256299}
   _ballRigidbody2D: {fileID: 7872807175918500886}
   _maxDeltaPosition: 2
+  _absPaddleOffset: 0.1
 --- !u!1 &5222284461666590971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4df49d0336e60e438020e4a2480af32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSpeed: 120
+  _maxSpeed: 150
 --- !u!4 &9001810819575626445
 Transform:
   m_ObjectHideFlags: 0
