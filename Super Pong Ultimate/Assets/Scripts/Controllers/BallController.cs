@@ -83,8 +83,10 @@ namespace Application.Controllers
                 _direction.x = -_direction.x; // flip X by negative X
 
                 // let's calculate Y direction
-                float distFromCenter = Mathf.Abs(collider.transform.position.y - _rigidbody2D.position.y);
-                _direction.y = Mathf.Lerp(0f, Mathf.Sign(_direction.y), distFromCenter / _maxDistFromCenter);
+                float distFromCenter = collider.transform.position.y - _rigidbody2D.position.y;
+                // will return either -1 if distFromCenter is positive and 1 if it's negative
+                float inverseDistFromCenterSign = Mathf.Sign(-distFromCenter); 
+                _direction.y = Mathf.Lerp(0f, inverseDistFromCenterSign, Mathf.Abs(distFromCenter) / _maxDistFromCenter);
 
                 // Scale magnitudes up, so we won't hinder the speed of our ball
                 float magnitude = _direction.magnitude;

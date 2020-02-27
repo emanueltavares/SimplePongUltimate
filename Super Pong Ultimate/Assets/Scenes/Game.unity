@@ -2326,8 +2326,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _startDeltaPosition: 1
-  _maxDeltaPosition: 2
+  _startDeltaPosition: 2.5
+  _maxDeltaPosition: 5
   _difficultyProgression:
     serializedVersion: 2
     m_Curve:
